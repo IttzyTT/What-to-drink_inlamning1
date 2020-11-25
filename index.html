@@ -10,7 +10,7 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/ms-icon-310x310.png"
+      href="ms-icon-310x310.png"
     />
     <link
       rel="stylesheet"
@@ -34,22 +34,37 @@
     <div id="general">
       <section>
         <div id="main">
-          <!-- HEAD -->
-          <div id="head">
-            <a href="#" id="site-logo">LOGO</a>
-          </div>
-          <!-- ERROR -->
-          <div id="error-txt">
-            <p class="error-txt">error text</p>
-          </div>
-          <!-- SEARCH -->
-          <div id="search-box">
-            <form action="" id="search-form">
-              <div id="search-line">
-                <input type="text" placeholder="Vad vill du äta..." />
-                <button id="search-btn"><i class="fas fa-search"></i></button>
+          <div id="head-search">
+            <!-- HEAD -->
+            <div id="header">
+              <header>
+                <a href="#" id="site-txt">What to eat?</a>
+                <a href="#" id="site-logo"
+                  ><img
+                    src="/ms-icon-310x310.png"
+                    alt="Site logo"
+                    style="height: 5rem"
+                /></a>
+              </header>
+
+              <!-- ERROR -->
+              <div id="error-txt">
+                <p class="error-txt">error text</p>
               </div>
-            </form>
+            </div>
+            <!-- SEARCH -->
+            <div id="search-box">
+              <form action="" id="search-form">
+                <input
+                  id="search-input"
+                  type="text"
+                  placeholder="Vad vill du äta..."
+                />
+                <button id="search-btn" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <!-- SEARCH FILTER -->

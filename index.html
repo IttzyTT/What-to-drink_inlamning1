@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>What to eat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/ms-icon-310x310.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nerko+One&display=swap"
+      rel="stylesheet"
+    />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div id="general">
+      <section>
+        <div id="main">
+          <!-- HEAD -->
+          <div id="head">
+            <a href="#" id="site-logo">LOGO</a>
+          </div>
+          <!-- ERROR -->
+          <div id="error-txt">
+            <p class="error-txt">error text</p>
+          </div>
+          <!-- SEARCH -->
+          <div id="search-box">
+            <form action="" id="search-form">
+              <div id="search-line">
+                <input type="text" placeholder="Vad vill du äta..." />
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- SEARCH FILTER -->
+        <div id="search-filter">
+          <div id="filter">
+            <!-- Kött eller Fiks -->
+            <form action="">
+              <select name="matval" id="matval">
+                <option value="" disabled selected hidden>
+                  Välj Kött eller Vego
+                </option>
+                <option value="Kött">Kött</option>
+                <option value="Vego">Vego</option>
+              </select>
+            </form>
+            <!-- Val av måltid -->
+            <form action="">
+              <select name="maltid" id="maltid">
+                <option value="" disabled selected hidden>Vilken måltid</option>
+                <option value="Frukost">Frukost</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Middag">Middag</option>
+              </select>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>What to eat</title>
+    <title>What to drink</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <link
@@ -28,7 +28,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Nerko+One&display=swap"
       rel="stylesheet"
     />
-    <script src="main.js"></script>
   </head>
   <body>
     <div id="general">
@@ -38,18 +37,14 @@
             <!-- HEAD -->
             <div id="header">
               <header>
-                <a href="#" id="site-txt">What to eat?</a>
-                <a href="#" id="site-logo"
-                  ><img
-                    src="/ms-icon-310x310.png"
-                    alt="Site logo"
-                    style="height: 5rem"
+                <a href="#" id="site-txt">What to drink?</a>
+                <a href="#"
+                  ><img id="site-logo" src="/martini.png" alt="Site logo"
                 /></a>
               </header>
-
               <!-- ERROR -->
-              <div id="error-txt">
-                <p class="error-txt">error text</p>
+              <div id="error-txt-div">
+                <p id="error-txt"></p>
               </div>
             </div>
             <!-- SEARCH -->
@@ -58,7 +53,7 @@
                 <input
                   id="search-input"
                   type="text"
-                  placeholder="Vad vill du äta..."
+                  placeholder="Search for a Cocktail..."
                 />
                 <button id="search-btn" type="submit">
                   <i class="fas fa-search"></i>
@@ -70,28 +65,62 @@
         <!-- SEARCH FILTER -->
         <div id="search-filter">
           <div id="filter">
-            <!-- Kött eller Fiks -->
-            <form action="">
-              <select name="matval" id="matval">
+            <!-- Alkohol-->
+            <div id="filter-1">
+              <select name="alcoholic" id="alcoholic">
                 <option value="" disabled selected hidden>
-                  Välj Kött eller Vego
+                  Filter by Alcoholic or none
                 </option>
-                <option value="Kött">Kött</option>
-                <option value="Vego">Vego</option>
+                <option value="Alcoholic">Alcohol</option>
+                <option value="Non_Alcoholic">Non Alcoholic</option>
               </select>
-            </form>
-            <!-- Val av måltid -->
-            <form action="">
-              <select name="maltid" id="maltid">
-                <option value="" disabled selected hidden>Vilken måltid</option>
-                <option value="Frukost">Frukost</option>
-                <option value="Lunch">Lunch</option>
-                <option value="Middag">Middag</option>
+            </div>
+            <!-- kattegori -->
+            <div id="filter-2">
+              <select name="category" id="category">
+                <option value="" disabled selected hidden>
+                  Filter by Category
+                </option>
+                <option value="Ordinary_Drink">Ordinary Drink</option>
+                <option value="Cocktail">Cocktail</option>
               </select>
-            </form>
+            </div>
+            <!-- A to Z -->
+            <div id="filter-3">
+              <select name="aToz" id="aToz">
+                <option value="" disabled selected hidden>
+                  Choose cocktails by first letter
+                </option>
+                <option value="a">Drinks that start at A</option>
+                <option value="b">Drinks that start at B</option>
+                <option value="c">Drinks that start at C</option>
+                <option value="d">Drinks that start at D</option>
+                <option value="f">Drinks that start at E</option>
+                <option value="g">Drinks that start at G</option>
+                <option value="h">Drinks that start at H</option>
+                <option value="i">Drinks that start at I</option>
+                <option value="j">Drinks that start at J</option>
+                <option value="l">Drinks that start at L</option>
+                <option value="m">Drinks that start at M</option>
+                <option value="n">Drinks that start at N</option>
+                <option value="o">Drinks that start at O</option>
+                <option value="p">Drinks that start at P</option>
+                <option value="q">Drinks that start at Q</option>
+                <option value="r">Drinks that start at R</option>
+                <option value="s">Drinks that start at S</option>
+                <option value="t">Drinks that start at T</option>
+                <option value="u">Drinks that start at U</option>
+                <option value="v">Drinks that start at V</option>
+                <option value="x">Drinks that start at X</option>
+                <option value="y">Drinks that start at Y</option>
+                <option value="z">Drinks that start at Z</option>
+              </select>
+            </div>
           </div>
         </div>
       </section>
     </div>
+    <div id="content"></div>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -37,7 +37,7 @@
             <!-- HEAD -->
             <div id="header">
               <header>
-                <a href="#" id="site-txt">What to drink?</a>
+                <h1 id="site-txt">What to drink?</h1>
                 <a href="#"
                   ><img id="site-logo" src="/martini.png" alt="Site logo"
                 /></a>
@@ -54,8 +54,7 @@
                   id="search-input"
                   type="text"
                   placeholder="Search for a Cocktail..."
-                />
-                <button id="search-btn" type="submit">
+                /><button id="search-btn" type="submit">
                   <i class="fas fa-search"></i>
                 </button>
               </form>
@@ -63,63 +62,65 @@
           </div>
         </div>
         <!-- SEARCH FILTER -->
-        <div id="search-filter">
-          <div id="filter">
-            <!-- Alkohol-->
-            <div id="filter-1">
-              <select name="alcoholic" id="alcoholic">
-                <option value="" disabled selected hidden>
-                  Filter by Alcoholic or none
-                </option>
-                <option value="Alcoholic">Alcohol</option>
-                <option value="Non_Alcoholic">Non Alcoholic</option>
-              </select>
-            </div>
-            <!-- kattegori -->
-            <div id="filter-2">
-              <select name="category" id="category">
-                <option value="" disabled selected hidden>
-                  Filter by Category
-                </option>
-                <option value="Ordinary_Drink">Ordinary Drink</option>
-                <option value="Cocktail">Cocktail</option>
-              </select>
-            </div>
-            <!-- A to Z -->
-            <div id="filter-3">
-              <select name="aToz" id="aToz">
-                <option value="" disabled selected hidden>
-                  Choose cocktails by first letter
-                </option>
-                <option value="a">Drinks that start at A</option>
-                <option value="b">Drinks that start at B</option>
-                <option value="c">Drinks that start at C</option>
-                <option value="d">Drinks that start at D</option>
-                <option value="f">Drinks that start at E</option>
-                <option value="g">Drinks that start at G</option>
-                <option value="h">Drinks that start at H</option>
-                <option value="i">Drinks that start at I</option>
-                <option value="j">Drinks that start at J</option>
-                <option value="l">Drinks that start at L</option>
-                <option value="m">Drinks that start at M</option>
-                <option value="n">Drinks that start at N</option>
-                <option value="o">Drinks that start at O</option>
-                <option value="p">Drinks that start at P</option>
-                <option value="q">Drinks that start at Q</option>
-                <option value="r">Drinks that start at R</option>
-                <option value="s">Drinks that start at S</option>
-                <option value="t">Drinks that start at T</option>
-                <option value="u">Drinks that start at U</option>
-                <option value="v">Drinks that start at V</option>
-                <option value="x">Drinks that start at X</option>
-                <option value="y">Drinks that start at Y</option>
-                <option value="z">Drinks that start at Z</option>
-              </select>
-            </div>
+        <div id="filter">
+          <!-- A to Z -->
+          <div id="filter-3">
+            <select name="aToz" id="aToz">
+              <option value="" disabled selected hidden>
+                Choose cocktails by first letter
+              </option>
+              <option value="a">Drinks that start at A</option>
+              <option value="b">Drinks that start at B</option>
+              <option value="c">Drinks that start at C</option>
+              <option value="d">Drinks that start at D</option>
+              <option value="e">Drinks that start at E</option>
+              <option value="f">Drinks that start at F</option>
+              <option value="g">Drinks that start at G</option>
+              <option value="h">Drinks that start at H</option>
+              <option value="i">Drinks that start at I</option>
+              <option value="j">Drinks that start at J</option>
+              <option value="k">Drinks that start at K</option>
+              <option value="l">Drinks that start at L</option>
+              <option value="m">Drinks that start at M</option>
+              <option value="n">Drinks that start at N</option>
+              <option value="o">Drinks that start at O</option>
+              <option value="p">Drinks that start at P</option>
+              <option value="q">Drinks that start at Q</option>
+              <option value="r">Drinks that start at R</option>
+              <option value="s">Drinks that start at S</option>
+              <option value="t">Drinks that start at T</option>
+              <option value="u">Drinks that start at U</option>
+              <option value="v">Drinks that start at V</option>
+              <option value="w">Drinks that start at W</option>
+              <option value="x">Drinks that start at X</option>
+              <option value="y">Drinks that start at Y</option>
+              <option value="z">Drinks that start at Z</option>
+            </select>
+          </div>
+          <!-- Alkohol-->
+          <div id="filter-1">
+            <select name="alcoholic" id="alcoholic">
+              <option value="" disabled selected hidden>
+                Filter by Alcoholic or none
+              </option>
+              <option value="Alcoholic">Alcohol</option>
+              <option value="Non_Alcoholic">Non Alcoholic</option>
+            </select>
+          </div>
+          <!-- kattegori -->
+          <div id="filter-2">
+            <select name="category" id="category">
+              <option value="" disabled selected hidden>
+                Filter by Category
+              </option>
+              <option value="Ordinary_Drink">Ordinary Drink</option>
+              <option value="Cocktail">Cocktail</option>
+            </select>
           </div>
         </div>
       </section>
     </div>
+
     <div id="content"></div>
     <script src="main.js"></script>
   </body>

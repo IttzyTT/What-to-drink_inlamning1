@@ -3,18 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-#header {
+header {
   margin-top: 10vh;
   min-height: 10vh;
+  display: flex;
 }
 
-a {
+#site-txt {
   font-family: 'nerko one';
   text-decoration: none;
   color: white;
   font-size: 5rem;
-  text-align: center;
   margin-left: 0.5rem;
+  margin-top: 2rem;
 }
 
 #site-logo {
@@ -53,6 +54,10 @@ form button {
   background: white;
   font-family: 'montserrat';
 }
+#search-btn {
+  cursor: pointer;
+  margin-left: 0.2rem;
+}
 
 #filter {
   display: flex;
@@ -60,6 +65,7 @@ form button {
 }
 #alcoholic {
   width: 14.2rem;
+  margin-left: 0.2rem;
 }
 #category {
   width: 13rem;
@@ -67,7 +73,6 @@ form button {
 }
 #aToz {
   width: 16.1rem;
-  margin-left: 0.2rem;
 }
 
 select {
@@ -106,4 +111,18 @@ select {
   height: 22rem;
   width: 100%;
   border-radius: 0.9rem;
+}
+.hidden {
+  display: none;
+}
+
+section {
+  margin-top: 0.5rem;
+}
+
+.info-text {
+  margin-top: 0.7rem;
+}
+.info-glass {
+  margin-top: 0.7rem;
 }

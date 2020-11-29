@@ -12,8 +12,7 @@ letterOption.addEventListener('change', showAll);
 alcoholOption.addEventListener('change', showAlcoholic);
 categoryOption.addEventListener('change', showCategory);
 
-// Fetch function
-
+// Fetch functions
 // Search drink
 async function getCocktails(e) {
   e.preventDefault();
@@ -22,7 +21,7 @@ async function getCocktails(e) {
   } else
     try {
       let response = await fetch(
-        'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' +
+        'https://www.thecocktaildb.com/api/json/v2/9973533/search.php?s=' +
           searchInput.value
       );
       const data = await response.json();
@@ -32,30 +31,43 @@ async function getCocktails(e) {
       let drinkHTML = '';
       for (let drink of drinks) {
         drinkHTML += '<div class="drinks">';
-        drinkHTML += `<img class="drink-img" src="${drink.strDrinkThumb}"></img>`;
-        drinkHTML += `<h2 class="drink-title">${drink.strDrink}</h2>`;
+        drinkHTML += `<a href"#"><img class="drink-img" src="${drink.strDrinkThumb}"></img></a>`;
+        drinkHTML += `<a href"#"><h2 class="drink-title">${drink.strDrink}</h2></a>`;
         drinkHTML += `<i class="drink-title">${
           drink.strAlcoholic + ' ' + drink.strCategory
         }</i>`;
+        drinkHTML += '<section class="hidden">';
+
+        drinkHTML += `<p class="info-text">${drink.strInstructions}</p>`;
+        drinkHTML += `<p class="info-glass">Glass: ${drink.strGlass}</p>`;
+        drinkHTML += '</section>';
         drinkHTML += '</div>';
       }
       content.innerHTML = drinkHTML;
+
+      let postTitles = document.querySelectorAll('.drinks a');
+      for (let postTitle of postTitles) {
+        postTitle.addEventListener('click', function () {
+          this.parentNode.lastElementChild.classList.toggle('hidden');
+        });
+      }
     } catch (error) {
       errorTxt.innerText =
         'Oh, no! Something went wrong... shake more cocktails';
     }
 }
 
-//Show all drinks
+//Show all drinks by letter
 async function showAll() {
   try {
     let response = await fetch(
-      'https://www.thecocktaildb.com/api/json/v1/1/search.php?f=' +
+      'https://www.thecocktaildb.com/api/json/v2/9973533/search.php?f=' +
         letterOption.value
     );
 
     const data = await response.json();
     const allDrinks = data.drinks;
+    console.log(allDrinks);
 
     let allDrinkHTML = '';
     for (let drink of allDrinks) {
@@ -76,7 +88,7 @@ async function showAll() {
 async function showAlcoholic() {
   try {
     let response = await fetch(
-      'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=' +
+      'https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?a=' +
         alcoholOption.value
     );
 
@@ -103,7 +115,7 @@ async function showAlcoholic() {
 async function showCategory() {
   try {
     let response = await fetch(
-      'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=' +
+      'https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?c=' +
         categoryOption.value
     );
 
